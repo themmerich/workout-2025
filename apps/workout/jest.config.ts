@@ -1,8 +1,8 @@
 export default {
-  displayName: 'workout-2025',
+  displayName: 'workout',
   preset: '../../jest.preset.js',
   setupFilesAfterEnv: ['<rootDir>/src/test-setup.ts'],
-  coverageDirectory: '../../coverage/apps/workout-2025',
+  coverageDirectory: '../../coverage/apps/workout',
   transform: {
     '^.+\\.(ts|mjs|js|html)$': [
       'jest-preset-angular',

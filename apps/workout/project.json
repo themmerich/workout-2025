@@ -1,28 +1,28 @@
 {
-  "name": "workout-2025",
+  "name": "workout",
   "$schema": "../../node_modules/nx/schemas/project-schema.json",
   "projectType": "application",
   "prefix": "app",
-  "sourceRoot": "apps/workout-2025/src",
+  "sourceRoot": "apps/workout/src",
   "tags": [],
   "targets": {
     "build": {
       "executor": "@angular-devkit/build-angular:application",
       "outputs": ["{options.outputPath}"],
       "options": {
-        "outputPath": "dist/apps/workout-2025",
-        "index": "apps/workout-2025/src/index.html",
-        "browser": "apps/workout-2025/src/main.ts",
+        "outputPath": "dist/apps/workout",
+        "index": "apps/workout/src/index.html",
+        "browser": "apps/workout/src/main.ts",
         "polyfills": ["zone.js"],
-        "tsConfig": "apps/workout-2025/tsconfig.app.json",
+        "tsConfig": "apps/workout/tsconfig.app.json",
         "inlineStyleLanguage": "scss",
         "assets": [
           {
             "glob": "**/*",
-            "input": "apps/workout-2025/public"
+            "input": "apps/workout/public"
           }
         ],
-        "styles": ["apps/workout-2025/src/styles.scss"],
+        "styles": ["apps/workout/src/styles.scss"],
         "scripts": []
       },
       "configurations": {
@@ -53,10 +53,10 @@
       "executor": "@angular-devkit/build-angular:dev-server",
       "configurations": {
         "production": {
-          "buildTarget": "workout-2025:build:production"
+          "buildTarget": "workout:build:production"
         },
         "development": {
-          "buildTarget": "workout-2025:build:development"
+          "buildTarget": "workout:build:development"
         }
       },
       "defaultConfiguration": "development"
@@ -64,7 +64,7 @@
     "extract-i18n": {
       "executor": "@angular-devkit/build-angular:extract-i18n",
       "options": {
-        "buildTarget": "workout-2025:build"
+        "buildTarget": "workout:build"
       }
     },
     "lint": {
@@ -74,14 +74,14 @@
       "executor": "@nx/jest:jest",
       "outputs": ["{workspaceRoot}/coverage/{projectRoot}"],
       "options": {
-        "jestConfig": "apps/workout-2025/jest.config.ts"
+        "jestConfig": "apps/workout/jest.config.ts"
       }
     },
     "serve-static": {
       "executor": "@nx/web:file-server",
       "options": {
-        "buildTarget": "workout-2025:build",
-        "staticFilePath": "dist/apps/workout-2025/browser",
+        "buildTarget": "workout:build",
+        "staticFilePath": "dist/apps/workout/browser",
         "spa": true
       }
     }
